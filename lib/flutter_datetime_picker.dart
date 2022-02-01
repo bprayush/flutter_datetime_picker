@@ -170,6 +170,7 @@ class DatePicker {
     locale: LocaleType.en,
     BasePickerModel? pickerModel,
     DatePickerTheme? theme,
+    bool saveOriginal: true,
   }) async {
     return await Navigator.push(
       context,
@@ -183,6 +184,7 @@ class DatePicker {
         barrierLabel:
             MaterialLocalizations.of(context).modalBarrierDismissLabel,
         pickerModel: pickerModel,
+        saveOriginal: saveOriginal,
       ),
     );
   }
